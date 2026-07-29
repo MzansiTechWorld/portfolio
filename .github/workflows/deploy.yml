@@ -13,12 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check if secrets exist
-        run: |
-          echo "Access Key present: ${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
-          echo "Secret Key present: ${{ secrets.AWS_SECRET_ACCESS_KEY != '' }}"
-          echo "Bucket present: ${{ secrets.S3_BUCKET != '' }}"
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -31,12 +25,12 @@ jobs:
           aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
             --delete \
             --exclude ".git/*" \
-            --exclude ".github/*"
+            --exclude ".github/*" \
             --exclude "README.md" \
             --exclude ".gitignore"
 
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation \
-          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-          --paths "/*"
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
