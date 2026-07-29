@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check if secrets exist
+        run: |
+          echo "Access Key present: ${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
+          echo "Secret Key present: ${{ secrets.AWS_SECRET_ACCESS_KEY != '' }}"
+          echo "Bucket present: ${{ secrets.S3_BUCKET != '' }}"
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
