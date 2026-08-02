@@ -124,10 +124,12 @@
                 <div>
                     <div class="entry">
                         <h3>AWS Cloud Practitioner</h3>
+                        <div class="sub">Preasignis</div>
                         <div class="meta">2024</div>
                     </div>
                     <div class="entry">
                         <h3>IT Technical Support</h3>
+                        <div class="sub">CTU</div>
                         <div class="meta">2026</div>
                     </div>
                 </div>
@@ -153,33 +155,48 @@
         </section>
 
         <section class="projects">
-            <div class="row-odd">
-
-                <div class="panel-mark">
-                    <div class="mark-num">04</div>
-                    <div class="mark-label">Featured Project</div>
+            <div class="project-header">
+                <div class="eyebrow">
+                    Unity • C++ • Networking
                 </div>
 
-                <div class="panel-copy">
-                    <div class="eyebrow">Unity • C++ • Networking</div>
+                <h2>
+                    Crazy 8 Multiplayer — a real-time online card game built from the ground up.
+                </h2>
+            </div>
 
-                    <h2>Crazy 8 Multiplayer — a real-time online card game built from the ground up.</h2>
+            <div class="project-content">
 
-                    <p>
-                        Crazy 8 Multiplayer is a cross-platform multiplayer card game featuring a
-                        Unity client written in C# and a custom C++ server responsible for game
-                        logic, player synchronization, and match management. Players can create
-                        or join lobbies and compete in real time with responsive gameplay.
+                <div class="project-gallery">
+                    <img src="images/crazy8/1.png" class="gallery-image active" alt="Crazy 8 Gameplay">
+                    <img src="images/crazy8/2.png" class="gallery-image" alt="Crazy 8 Lobby">
+                </div>
+
+                <div class="project-description">
+
+                    <p class="sub">
+                        Crazy 8 Multiplayer is a cross-platform card game featuring a Unity
+                        client written in C# and a custom C++ server responsible for game
+                        logic, player synchronization, and match management.
                     </p>
 
-                    <p>
-                        The project challenged me to design networking protocols, manage concurrent
-                        game state, implement turn-based mechanics, and build a scalable client-server
-                        architecture while keeping gameplay smooth and reliable.
+                    <p class="sub">
+                        Players can host or join lobbies, compete in real time, and experience
+                        responsive gameplay powered by a lightweight networking protocol built
+                        specifically for the project.
                     </p>
+
+                    <p class="sub">
+                        Developing the project involved implementing turn-based game mechanics,
+                        designing client-server communication, synchronizing game state between
+                        multiple players, and creating an intuitive user interface that mirrors
+                        the experience of a physical Crazy 8 game.
+                    </p>
+
                 </div>
 
             </div>
+
         </section>
 
         <section class="references">
@@ -191,114 +208,26 @@
             </div>
         </section>
 
-        <!-- <section class="shelf-section">
-            <div class="shelf-head">
-                <h2>Recent builds</h2>
-                <p>~/My Project</p>
-            </div>
-
-            <div class="shelf-viewport">
-                <div class="shelf-track" id="track">
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/Portfolio</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Portfolio Website</h3>
-                            <p>Proof that I can center a div... eventually. Showcasing projects, experience, and a healthy amount of caffeine.</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#1572B6"></span>Frontend</span>
-                                <span class="status">compiled successfully</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/Ticket logger</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>VSC extension</h3>
-                            <p>An extension built for managing and logging cases seamlessly</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#3572A5"></span>JavaScript</span>
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#3572A5"></span>JSON</span>
-                                <span class="status">in progress</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/kernel-toy</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Kernel Toy Scheduler</h3>
-                            <p>Tiny round-robin process scheduler built to poke at context-switch overhead.</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#555555"></span>C</span>
-                                <span class="status">archived</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/orbitwatch</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>OrbitWatch</h3>
-                            <p>Dashboard that tracks satellite passes overhead and pings you before a good one.</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#3178c6"></span>TypeScript</span>
-                                <span class="status">stable</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/riftdb</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>RiftDB</h3>
-                            <p>Embedded key-value store with an append-only log and background compaction.</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#dea584"></span>Rust</span>
-                                <span class="status">in progress</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-bar">
-                            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                            <span class="card-path">~/gridiron</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Gridiron Stats</h3>
-                            <p>Scrapes weekly box scores and turns them into a queryable player-form report.</p>
-                            <div class="card-foot">
-                                <span class="lang-tag"><span class="lang-swatch" style="background:#00ADD8"></span>Go</span>
-                                <span class="status">stable</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <footer>
             &lt;/&gt; Get to know me 😊
         </footer>
     </div>
 
 </body>
+<script>
+    const images = document.querySelectorAll(".gallery-image");
+
+    let current = 0;
+
+    setInterval(() => {
+
+        images[current].classList.remove("active");
+
+        current = (current + 1) % images.length;
+
+        images[current].classList.add("active");
+
+    }, 3500);
+</script>
 
 </html>
