@@ -488,16 +488,6 @@ section {
     align-items:center;
 }
 
-.project-gallery{
-    position:relative;
-    aspect-ratio:16/10;
-
-    border-radius:16px;
-    overflow:hidden;
-
-    background:#162132;
-}
-
 .row-odd{
     display:grid;
     grid-template-columns:320px 1fr;
@@ -530,7 +520,7 @@ section {
     padding:40px;
 }
 
-.project-gallery{
+.project-gallery-1, .project-gallery-2{
     position:relative;
     width:100%;
     aspect-ratio:16/10;
@@ -544,7 +534,7 @@ section {
         0 15px 40px rgba(0,0,0,.25);
 }
 
-.gallery-image{
+.gallery-image-1, .gallery-image-2{
     position:absolute;
     inset:0;
 
@@ -559,12 +549,15 @@ section {
 }
 
 
-.gallery-image.active{
+.gallery-image-1.active, .gallery-image-2.active{
     opacity:1;
     animation:kenburns 3.5s linear;
 }
 
-
+.project-description{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .mark-num{
     font-family:"Space Grotesk",sans-serif;
     font-size:clamp(64px,8vw,100px);

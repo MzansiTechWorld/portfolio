@@ -167,9 +167,9 @@
 
             <div class="project-content">
 
-                <div class="project-gallery">
-                    <img src="images/crazy8/1.png" class="gallery-image active" alt="Crazy 8 Gameplay">
-                    <img src="images/crazy8/2.png" class="gallery-image" alt="Crazy 8 Lobby">
+                <div class="project-gallery-1">
+                    <img src="images/crazy8/1.png" class="gallery-image-1 active" alt="Crazy 8 Gameplay">
+                    <img src="images/crazy8/2.png" class="gallery-image-1" alt="Crazy 8 Lobby">
                 </div>
 
                 <div class="project-description">
@@ -199,6 +199,51 @@
 
         </section>
 
+        <section class="projects">
+            <div class="project-header">
+                <div class="eyebrow">
+                    JavaScript • VS Code API • JSON
+                </div>
+
+                <h2>Case Logger — a VS Code extension built to streamline technical support documentation.</h2>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+
+                    <p class="sub">
+                        Case Logger is a custom Visual Studio Code extension designed to make logging
+                        and documenting technical support cases faster and more consistent. It provides
+                        structured templates and shortcuts for capturing the information needed when
+                        working with customer incidents and technical issues.
+                    </p>
+
+                    <p class="sub">
+                        The extension includes dedicated templates for common case types, intelligent
+                        field suggestions, and custom formatting that helps keep case notes organised
+                        and easy to read. It was built around the workflow of a technical support
+                        environment rather than as a generic text editor.
+                    </p>
+
+                    <p class="sub">
+                        Developing Case Logger involved working with the VS Code Extension API,
+                        JavaScript, JSON-based configuration, snippets, completion providers, and
+                        custom editor behaviour. The project evolved through testing real-world
+                        support workflows and refining the extension to reduce repetitive typing
+                        and improve the consistency of technical documentation.
+                    </p>
+
+                </div>
+                <div class="project-gallery-2">
+                    <img src="images/case logger/1.png" class="gallery-image-2 active" alt="">
+                    <img src="images/case logger/2.png" class="gallery-image-2" alt="">
+                    <img src="images/case logger/3.png" class="gallery-image-2" alt="">
+                </div>
+
+            </div>
+
+        </section>
+
         <section class="references">
             <div class="section-label">References</div>
             <div class="ref-card">
@@ -215,17 +260,31 @@
 
 </body>
 <script>
-    const images = document.querySelectorAll(".gallery-image");
+    const images_Crazy8 = document.querySelectorAll(".gallery-image-1");
 
     let current = 0;
 
     setInterval(() => {
 
-        images[current].classList.remove("active");
+        images_Crazy8[current].classList.remove("active");
 
-        current = (current + 1) % images.length;
+        current = (current + 1) % images_Crazy8.length;
 
-        images[current].classList.add("active");
+        images_Crazy8[current].classList.add("active");
+
+    }, 3500);
+
+    const images_CaseLogger = document.querySelectorAll(".gallery-image-2");
+
+    let current2 = 0;
+
+    setInterval(() => {
+
+        images_CaseLogger[current2].classList.remove("active");
+
+        current2 = (current2 + 1) % images_CaseLogger.length;
+
+        images_CaseLogger[current2].classList.add("active");
 
     }, 3500);
 </script>
